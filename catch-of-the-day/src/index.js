@@ -2,6 +2,6 @@ import React from 'react'; // no need for a file path because webpack looks in n
 import { render } from 'react-dom';
 import './css/style.css'
 import StorePicker from './components/StorePicker'; // need to give relative file path for components the YOU make.
+import App from './components/App';
 
-
-render(<StorePicker/>, document.querySelector('#main'));
+render(<App/>, document.querySelector('#main'));
