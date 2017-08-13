@@ -6,6 +6,7 @@ class StorePicker extends React.Component {
     return (
       // You must always return only ONE element/parent-tag, so nest things if you need to have more than one tag returned
       <form className="store-selector">
+        { /* Inside of JSX element, you need to use this method. Regular comment convention doesn't work */ }
         <h2>Please Enter a Store</h2>
         <input type="text" required placeholder="Store Name" />
         <button type="submit">Visit Store</button>
