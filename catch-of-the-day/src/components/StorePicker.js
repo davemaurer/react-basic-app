@@ -15,8 +15,10 @@ class StorePicker extends React.Component {
   goToStore(event) {
     event.preventDefault(); // stops page refresh, which is default behavior when form is submitted
     // 1 - Grab the text from the box on the page
-    console.log(this);
+    const storeId = this.storeInput.value;
+
     // 2 - Transition fro / to /store/:storeId
+    this.context.router.transitionTo(`/store/${storeId}`)
   }
 
   render() {
