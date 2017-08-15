@@ -35,4 +35,10 @@ class StorePicker extends React.Component {
   }
 }
 
+// use context(a way of declaring data/objects at the top level, to be used by all lower levels)  to surface the router.
+
+StorePicker.contextTypes = {
+  router: React.PropTypes.object
+};
+
 export default StorePicker;
