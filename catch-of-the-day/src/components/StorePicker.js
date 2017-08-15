@@ -10,12 +10,12 @@ class StorePicker extends React.Component {
   //    this.mySecondMethod = this.goToStore.bind(this);
   //    and so on
   //  }
-  
+
 
   goToStore(event) {
     event.preventDefault(); // stops page refresh, which is default behavior when form is submitted
     // 1 - Grab the text from the box on the page
-    console.log(this.storeInput);
+    console.log(this);
     // 2 - Transition fro / to /store/:storeId
   }
 
@@ -23,7 +23,8 @@ class StorePicker extends React.Component {
     // return React.createElement('h1', {className: 'big-stuff'}, 'This is a big font'); **this would be WITHOUT JSX
     return (
       // You must always return only ONE element/parent-tag, so nest things if you need to have more than one tag returned
-      <form className="store-selector" onSubmit={this.goToStore}>
+      <form className="store-selector" onSubmit={this.goToStore.bind(this)}> { /* use .bind(this) to pass the component to a function
+       outside the render method. Another way to write this.goToStore.bind(this), is (e) => this.goToStore(e)*/ }
         { /* Inside of JSX element, you need to use this method. Regular comment convention doesn't work */ }
         <h2>Please Enter a Store</h2>
         <input type="text" required placeholder="Store Name" defaultValue={
