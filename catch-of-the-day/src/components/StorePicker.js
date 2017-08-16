@@ -27,7 +27,7 @@ class StorePicker extends React.Component {
       // You must always return only ONE element/parent-tag, so nest things if you need to have more than one tag returned
       <form className="store-selector" onSubmit={this.goToStore.bind(this)}> { /* use .bind(this) to pass the component to a function
        outside the render method. Another way to write this.goToStore.bind(this), is (e) => this.goToStore(e)*/ }
-        { /* Inside of JSX element, you need to use this method. Regular comment convention doesn't work */ }
+        { /* Inside of JSX element, you need to use this method to make a code comment. Regular comment convention doesn't work */ }
         <h2>Please Enter a Store</h2>
         <input type="text" required placeholder="Store Name" defaultValue={
           getFunName() } ref={ (input) => { this.storeInput = input } } />
