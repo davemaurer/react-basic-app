@@ -32,6 +32,7 @@ class Inventory extends React.Component {
           onChange={(e) => this.handleChange(e, key)} />
         <input type="text" name="image" value={fish.image} placeholder="Fish Image"
           onChange={(e) => this.handleChange(e, key)} />
+        <button onClick={() => this.props.removeFish(key) }>Remove Fish</button>
       </div>
     )
   }
@@ -41,7 +42,7 @@ class Inventory extends React.Component {
       <div>
         <h2>Inventory</h2>
         {Object.keys(this.props.fishes).map(this.renderInventory)}
-        <AddFishForm addFish={this.props.addFish} />
+        <AddFishForm addFish={ this.props.addFish } />
         <button onClick={ this.props.loadSamples }>Load Sample Fishes</button>
       </div>
     )
