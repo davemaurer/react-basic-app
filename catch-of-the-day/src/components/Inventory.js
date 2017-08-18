@@ -16,6 +16,14 @@ class Inventory extends React.Component {
     };
   }
 
+  componentDidMount() {
+    base.onAuth((user) => {
+      if(user) {
+        this.authHandler(null, { user });
+      }
+    });
+  }
+
   handleChange(e, key) {
     const fish = this.props.fishes[key];
     // copy fish and update with new data
