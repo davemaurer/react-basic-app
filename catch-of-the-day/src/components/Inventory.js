@@ -15,6 +15,18 @@ class Inventory extends React.Component {
     this.props.updateFish(key, updatedFish);
   }
 
+  renderLogin() {
+    return (
+      <nav className="login">
+        <h2>Inventory</h2>
+        <p>Sign in to manage your store's inventory</p>
+        <button className="github" onClick={() => this.authenticate('github')}>Log in with Github</button>
+        <button className="Twitter" onClick={() => this.authenticate('Twitter')}>Log in with Twitter</button>
+        <button className="facebook" onClick={() => this.authenticate('facebook')}>Log in with Facebook</button>
+      </nav>
+    )
+  }
+
   renderInventory(key) {
     const fish = this.props.fishes[key];
     return (
